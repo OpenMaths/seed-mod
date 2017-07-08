@@ -1,0 +1,17 @@
+.DS_Store
+.Spotlight-V100
+.Trashes
+Thumbs.db
+
+.*-cache
+*.log
+*.css
+.idea
+
+.env
+.env.production
+gcloud-service-key.json
+
+dist/
+bower_components/
+node_modules/
