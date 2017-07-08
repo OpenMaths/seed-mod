@@ -18,5 +18,14 @@ prettify:
 
 test:
 	${jest_executable} \
-	--colors \
-	--config=${jest_config_file}
+	--config=${jest_config_file} \
+	--coverage \
+	--watch
+
+test-ci:
+	${jest_executable} \
+	--bail \
+	--ci \
+	--config=${jest_config_file} \
+	--coverage \
+	--runInBand

@@ -5,8 +5,7 @@
     "diagnostics": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
-      "es2015",
-      "dom"
+      "es2015"
     ],
     "module": "commonjs",
     "moduleResolution": "node",

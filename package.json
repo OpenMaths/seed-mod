@@ -1,10 +1,11 @@
 {
-  "name": "seed-mod",
+  "name": "@openmaths/seed-mod",
   "version": "1.0.0",
-  "description": "NPM Module Seed",
+  "description": "The Module Seeder",
   "main": "./dist/main.js",
+  "typings": "./dist/main.d.ts",
   "dependencies": {
-    "tsp-monads": "^13.0.0"
+    "tsp-monads": "^13.1.0"
   },
   "devDependencies": {
     "@types/jest": "^20.0.2",
