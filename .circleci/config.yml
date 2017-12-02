@@ -5,7 +5,14 @@ defaults: &defaults
 
 whitelist: &whitelist
   paths:
-    - "**/*"
+    - .npmignore
+    - coverage/*
+    - dist/*
+    - node_modules/*
+    - src/*
+    - "*.json"
+    - makefile
+    - README.md
 
 version: 2
 jobs:
