@@ -54,7 +54,7 @@ jobs:
           name: Publish Code coverage
           command: bash <(curl -s https://codecov.io/bash)
 
-   deploy:
+  deploy:
     <<: *defaults
     steps:
       - attach_workspace:
