@@ -1,6 +1,6 @@
 {
   "name": "@openmaths/seed",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "The Node Module Seed",
   "main": "./dist/main.js",
   "typings": "./dist/main.d.ts",
