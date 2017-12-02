@@ -101,28 +101,38 @@ workflows:
           filters:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
       - build:
           filters:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
           requires:
             - checkout
       - test:
           filters:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
           requires:
             - build
       - codecov:
           filters:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
           requires:
             - test
       - deploy:
           filters:
             tags:
               only: /v[0-9]+(\.[0-9]+)*/
+            branches:
+              ignore: /.*/
           requires:
             - test
             - codecov
