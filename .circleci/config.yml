@@ -21,15 +21,15 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
-          root: ~/repo
+          root: ~/src
 
   build:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/repo
+          at: ~/src
       - run:
-          name: Build ./src
+          name: Compile source
           command: make compile
       - persist_to_workspace:
           root: ~/repo
@@ -38,18 +38,18 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/repo
+          at: ~/src
       - run:
           name: Run tests
           command: make test-ci
       - persist_to_workspace:
-          root: ~/repo
+          root: ~/src
 
   codecov:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/repo
+          at: ~/src
       - run:
           name: Publish Code coverage
           command: bash <(curl -s https://codecov.io/bash)
@@ -58,7 +58,7 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/repo
+          at: ~/src
       - run: 
           name: Write NPM Token to ~/.npmrc
           command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> ~/.npmrc
