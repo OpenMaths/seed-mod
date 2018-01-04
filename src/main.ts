@@ -1,2 +1,1 @@
-const main = () => console.log("Hello, World!")
-main()
+export { default as greeter } from './greeter'
