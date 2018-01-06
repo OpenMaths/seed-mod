@@ -2,7 +2,7 @@ directoryPath="../mod-*"
 
 for dir in `find $directoryPath -type d -maxdepth 0 -mindepth 0`; do
   echo "\nCOPYING COMMON FILES INTO ${dir}...\n"
-  cp -v "jest.json" "makefile" "tsconfig.json" "codecov.yaml" $dir
+  cp -v "codecov.yaml" "jest.json" "makefile" "renovate.json" "tsconfig.json" $dir
   cp -vr ".circleci" $dir
 
   cd $dir
