@@ -1,5 +1,1 @@
-function greeter(name: string) {
-  return `Hello, ${name}!`
-}
-
-export default greeter
+export { default as greet } from "./main"

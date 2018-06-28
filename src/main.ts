@@ -1,1 +1,1 @@
-export { default as greeter } from './greeter'
+export { default as greet } from "./greeter/main"
